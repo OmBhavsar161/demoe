@@ -38,7 +38,7 @@ const CartItems = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:4000/create-checkout-session', {
+      const response = await fetch('https://demoe.vercel.app/create-checkout-session', {
         method: "POST",
         headers: headers,
         body: JSON.stringify(body),
