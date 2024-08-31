@@ -17,7 +17,13 @@ const convertINRToUSD = (amountInINR) => {
 };
 
 app.use(express.json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://demoe.vercel.app", // Allow requests from your frontend
+    methods: ["POST", "GET"], // Allow specific methods
+  })
+);
 
 // Connect to MongoDB without deprecated options
 mongoose
