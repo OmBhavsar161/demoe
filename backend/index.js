@@ -22,6 +22,7 @@ app.use(
   cors({
     origin: "https://demoe.vercel.app", // Allow requests from your frontend
     methods: ["POST", "GET"], // Allow specific methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Ensure necessary headers are alloweds
   })
 );
 
