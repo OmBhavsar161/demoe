@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://demoe.vercel.app", // Allow requests from your frontend
-    methods: ["POST", "GET"], // Allow specific methods
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allow the methods you need
     allowedHeaders: ["Content-Type", "Authorization"], // Ensure necessary headers are alloweds
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
