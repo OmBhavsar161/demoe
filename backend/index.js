@@ -27,6 +27,9 @@ app.use(
   })
 );
 
+// Handling preflight requests
+app.options('*', cors()); // Handle preflight requests for all routes
+
 // Connect to MongoDB without deprecated options
 mongoose
   .connect(process.env.MONGO_URL)
