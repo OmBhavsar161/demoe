@@ -22,13 +22,13 @@ app.use(
   cors({
     origin: "https://demoe.vercel.app", // Allow requests from your frontend
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allow the methods you need
-    allowedHeaders: ["Content-Type", "Authorization"], // Ensure necessary headers are alloweds
+    allowedHeaders: ["Content-Type", "Authorization"], // Ensure necessary headers are allowed
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );
 
 // Handling preflight requests
-app.options('*', cors()); // Handle preflight requests for all routes
+app.options("*", cors()); // Handle preflight requests for all routes
 
 // Connect to MongoDB without deprecated options
 mongoose
